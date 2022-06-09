@@ -1,13 +1,18 @@
-from data.sample_docs import sample_corpus
 from data.stopwords import stopwords_english
 
 from collections import defaultdict
 
 import re
 import pprint
+import json
+
+# READ IN CORPUS
+with open("data/sample_corpus_software_engineering.json") as json_file:
+    sample_corpus_json = json.load(json_file)
+sample_corpus = sample_corpus_json["sample_corpus"][0:10]
 
 # REMOVE PUNCTUATION
-pattern = re.compile("\.|,|\?|!|\(|\)")
+pattern = re.compile("\.|,|;|\?|!|\(|\)|\[|\]")
 text_corpus = []
 for sample_doc in sample_corpus:
     clean_doc = pattern.sub("", sample_doc)
@@ -32,3 +37,4 @@ processed_corpus = [
     [token for token in text if frequency[token] > 1] 
     for text in texts
     ]
+
