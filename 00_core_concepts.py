@@ -10,6 +10,9 @@ import re
 import pprint
 import json
 
+# SOURCE:
+# https://radimrehurek.com/gensim/auto_examples/core/run_core_concepts.html#sphx-glr-auto-examples-core-run-core-concepts-py
+
 # READ IN CORPUS
 with open("data/sample_corpus_software_engineering.json") as json_file:
     sample_corpus_json = json.load(json_file)
