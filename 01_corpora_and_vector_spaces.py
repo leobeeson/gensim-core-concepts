@@ -50,4 +50,13 @@ dictionary = corpora.Dictionary(processed_corpus)
 dictionary.save("/tmp/stackexchange_first_ten_tags.dict")
 print(dictionary)
 
+# BOW VECTORS
+new_doc = "python and java developer needed by UK startup"
+new_vec = dictionary.doc2bow(new_doc.lower().split())
+print(new_vec)
+
+# BOW CORPUS
+bow_corpus = [dictionary.doc2bow(token) for token in processed_corpus]
+corpora.MmCorpus.serialize("/tmp/stackexchange_first_ten_tags.mm", bow_corpus)
+print(bow_corpus)
 
