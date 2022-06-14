@@ -67,7 +67,3 @@ def build_corpus_dictionary(filepath: str, key: str) -> Dictionary:
 
 dictionary = build_corpus_dictionary(CORPUS_FILEPATH, CORPUS_KEY) 
 dictionary.save("/tmp/stackexchange_corpus_dictionary.dict")
-
-
-# new_doc = "python and java developer needed by UK startup"
-# new_vec = dictionary.doc2bow(new_doc.lower().split())
