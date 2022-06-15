@@ -6,7 +6,9 @@ As per [here](https://radimrehurek.com/gensim/auto_examples/core/run_core_concep
 * Add computer science/programming controlled vocabularies. #DONE
 * Parse software engineering sample_corpus with gensim utilities. #DONE
 * Corpus Streaming – Build dictionary streaming one document at a time (data/build_corpus_dictionary.py) #DONE
-* Explore Corpus Formats #TODO
+* Explore Corpus Formats #DONE
+* Topics and Transformations #FOCUS
+
 
 ### Mid Priority:
 * Design ontology model for software engineering domain. #TODO
