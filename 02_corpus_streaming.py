@@ -22,6 +22,7 @@ class MyDictionary:
     
     def __init__(self, corpus_filepath):
         self.dictionary = self.stream_dictionary(corpus_filepath)
+        self.compactify_dictionary(min_freq=0)
 
     def stream_dictionary(self, corpus_filepath):
         dictionary = corpora.Dictionary(
@@ -43,6 +44,11 @@ class MyDictionary:
                 ]
         return tokenized_line
 
+    def compactify_dictionary(self, min_freq: int) -> None:
+        below_threshold_ids = [token_id for token_id, term_freq in self.dictionary.cfs.items() if term_freq <= min_freq]
+        self.dictionary.filter_tokens(below_threshold_ids)
+        self.dictionary.compactify()
+        
 
 my_dict = MyDictionary(CORPUS_FILEPATH)
 print(my_dict)

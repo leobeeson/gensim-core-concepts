@@ -16,7 +16,7 @@ import json
 # READ IN CORPUS
 with open("data/sample_corpus_software_engineering.json") as json_file:
     sample_corpus_json = json.load(json_file)
-sample_corpus = sample_corpus_json["sample_corpus"][0:10]
+sample_corpus = sample_corpus_json["corpus"][0:10]
 
 # REMOVE PUNCTUATION
 pattern = re.compile("\.|,|;|\?|!|\(|\)|\[|\]")
