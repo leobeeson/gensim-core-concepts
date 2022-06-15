@@ -8,6 +8,7 @@ As per [here](https://radimrehurek.com/gensim/auto_examples/core/run_core_concep
 * Corpus Streaming – Build dictionary streaming one document at a time (data/build_corpus_dictionary.py) #DONE
 * Explore Corpus Formats #DONE
 * Topics and Transformations #FOCUS
+* Create bespoke `MyCorpus` class in `.classes/`. #TODO
 
 
 ### Mid Priority:
