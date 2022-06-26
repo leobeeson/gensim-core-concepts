@@ -49,3 +49,4 @@ dist/**
 
 # Project-specific files:
 sample_corpus_*
+.vscore
