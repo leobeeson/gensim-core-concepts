@@ -65,3 +65,9 @@ lsi_model = models.LsiModel(corpus_tf_idf, id2word=my_dict.dictionary, num_topic
 
 # Random Projections
 rp_model = models.RpModel(corpus_tf_idf, num_topics=500)
+
+# LDA
+lda_model = models.LdaModel(corpus, id2word=my_dict.dictionary, num_topics=100)
+
+# Hierarchical Dirichlet Process (HDP):
+hdp_model = models.HdpModel(corpus, id2word=my_dict.dictionary)
