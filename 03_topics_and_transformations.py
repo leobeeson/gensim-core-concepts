@@ -1,4 +1,3 @@
-from locale import normalize
 from classes.my_dictionary import MyDictionary
 from data.stopwords import stopwords_english
 from smart_open import open
